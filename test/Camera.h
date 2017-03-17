@@ -8,10 +8,14 @@
 
 const float EPSILON = 1e-6f;
 
-// Debug...
-#include "../vendor/glm/gtx/string_cast.hpp"
-#include <iostream>
-
+/**
+ * @brief      Compares two 4x4 matrices for equality within epsilon
+ *
+ * @param[in]  a
+ * @param[in]  b
+ *
+ * @return     true if matrices are equivalent within floating point tolerance
+ */
 bool mat4Equivalent(glm::mat4 a, glm::mat4 b) {
   for (int i = 0; i < 4; i++) {
     for (int j = 0; j < 4; j++) {
